@@ -21,5 +21,26 @@ public class segiempat extends Object2d{
     public double getlebar(){
         return lebar;
     }
-    public void 
+    public void setlebar(double lebar){
+        this.lebar=lebar;
+    }
+    @Override
+    public double hitungluaspermukaan(){
+        return panjang*lebar;
+    }
+    @Override
+    public double hitunkeliling(){
+        return 2 * (panjang + lebar);
+    }
+    @Override
+    public String getvalueDetail(){
+        return new String[][]{
+            {"label",getlabel()},
+            {"panjang",String.valueOf(panjang)},
+            {"lebar",String.valueOf(lebar)},
+            {"luas permukaan",String.valueOf(hitungluaspermukaan())},
+            {"keliling",String.valueOf(hitunkeliling())}
+        }
+    }
 }
+
