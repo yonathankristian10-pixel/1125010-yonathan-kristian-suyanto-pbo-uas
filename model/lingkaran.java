@@ -22,6 +22,15 @@ public class lingkaran extends Object2d{
     public double hitungkeliling(){
         return 2 * math.PI * jari2;
     }
-    
+    @Override 
+    public String getvalueDetail(){
+        return new String[][]{
+            {"label",getlabel()},
+            {"jari-jari",String.valueOf(jari2)},
+            {"luas permukaan",String.valueOf(hitungluaspermukaan())},
+            {"keliling",String.valueOf(hitunkeliling())}
+        }
+    }
+
     
 }
